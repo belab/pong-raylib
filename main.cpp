@@ -101,8 +101,9 @@ int main(void)
 		BeginDrawing();
 
 			ClearBackground(BLACK);
-			DrawText(std::to_string(scorePlayer1).c_str(), 100, 0, 20, WHITE);
-			DrawText(std::to_string(scorePlayer2).c_str(), 290, 0, 20, WHITE);
+			DrawText(std::to_string(scorePlayer1).c_str(), 100, 0, 30, WHITE);
+			DrawText(std::to_string(scorePlayer2).c_str(), 290, 0, 30, WHITE);
+			DrawRectangle(200, 0, 1, 400, WHITE);
 			DrawRectangleV(ball, {20.f, 20.f}, WHITE);
 			DrawRectangleV(player1, {10.f, 50.f}, WHITE);
 			DrawRectangleV(player2, {10.f, 50.f}, WHITE);
