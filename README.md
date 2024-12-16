@@ -4,7 +4,8 @@ Minimalistic implementation of pong with raylib. This project is using cmake and
 
 ## Setup
 
-Run vcpkg_setup.bat
+Run vcpkg_setup.bat.
+For additional dependencies, run ```vcpkg/vcpkg add port <package>```
 
 ### VSCode
 

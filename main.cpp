@@ -47,11 +47,12 @@ int main(void)
 	Vector2 ball{100.0f, 200.0f};
 	Vector2 player1{20.0f, 200.0f};
 	Vector2 player2{370.0f, 200.0f};
-	Vector2 ballSpeed{0.05f, 0.05f};
+	Vector2 ballSpeed{0.1f, 0.1f};
 	float dt= 0.0f;
 
-	InitWindow(400, 400, "PONG");
+	InitWindow(400, 400, "PONG-raylib");
 	SetTargetFPS(60);
+	auto font = LoadFont("lcd.14.otf");
 
 	while (!WindowShouldClose())
 	{
@@ -101,8 +102,8 @@ int main(void)
 		BeginDrawing();
 
 			ClearBackground(BLACK);
-			DrawText(std::to_string(scorePlayer1).c_str(), 100, 0, 30, WHITE);
-			DrawText(std::to_string(scorePlayer2).c_str(), 290, 0, 30, WHITE);
+			DrawTextEx(font, std::to_string(scorePlayer1).c_str(), {100.f, 0.f}, 30.f, 0.f, WHITE);
+			DrawTextEx(font, std::to_string(scorePlayer2).c_str(), {290.f, 0.f}, 30.f, 0.f, WHITE);
 			DrawRectangle(200, 0, 1, 400, WHITE);
 			DrawRectangleV(ball, {20.f, 20.f}, WHITE);
 			DrawRectangleV(player1, {10.f, 50.f}, WHITE);
